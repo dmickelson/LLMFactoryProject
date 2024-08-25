@@ -1,0 +1,108 @@
+# pyproject.toml
+
+[build-system]
+# Specify the build system requirements
+# These are the minimum requirements for building the project
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# The name of your project (required)
+name = "your-project-name"
+# Dynamic versioning using setuptools_scm (recommended)
+# This will use your Git tags for versioning
+dynamic = ["version"]
+# A short description of your project (required)
+description = "A short description of your project"
+# Longer description, can be the same as README content
+readme = "README.md"
+# Project license
+license = {file = "LICENSE"}
+# Minimum Python version required
+requires-python = ">=3.7"
+# Project authors
+authors = [
+    {name = "David Mickelson", email = "davidpmickelson@gmail.com"},
+]
+# Project maintainers (if different from authors)
+maintainers = [
+    {name = "Maintainer Name", email = "maintainer.email@example.com"},
+]
+# Project keywords (for PyPI)
+keywords = ["keyword1", "keyword2"]
+# Project classifiers (see https://pypi.org/classifiers/)
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+# Dependencies
+# List your project's dependencies here
+dependencies = [
+    "pydantic_settings>=2.0.0",  # Added pydantic_settings
+    "pytest>=6.2.5",  # Added pytest to main dependencies
+    "python-dotenv>=0.19.0",  # Added python-dotenv
+    # Add more dependencies as needed
+]
+
+# Optional dependencies
+# These can be installed using pip install your-project[dev]
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.2.5",
+    "black>=21.12b0"
+    "flake8>=4.0.1",
+    # Add more development dependencies as needed
+]
+
+# Entry points for your project (if it's a command-line tool)
+[project.scripts]
+your-cli-command = "your_package.module:function"
+
+# URLs associated with the project
+[project.urls]
+Homepage = "https://github.com/yourusername/your-project"
+Documentation = "https://your-project.readthedocs.io"
+Repository = "https://github.com/yourusername/your-project.git"
+"Bug Tracker" = "https://github.com/yourusername/your-project/issues"
+
+# Tool configurations
+[tool.setuptools]
+# Specify package discovery information
+packages = ["your_package"]
+
+[tool.setuptools_scm]
+# Configuration for setuptools_scm (automatic versioning)
+write_to = "your_package/_version.py"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203"]
+max-complexity = 10
+exclude = [
+    "venv",
+    "test/data/"
+]
+
+[tool.isort]
+# Configuration for isort import sorter
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 88
+
+[tool.pytest.ini_options]
+# Configuration for pytest
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
