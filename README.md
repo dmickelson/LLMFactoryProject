@@ -1,0 +1,2 @@
+- Simple factory pattern that lets you choose different LLM providers on a dynamic basis
+- Uses Instructure module under the hood for getting sturctured output

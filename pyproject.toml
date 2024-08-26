@@ -7,29 +7,20 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-# The name of your project (required)
-name = "your-project-name"
+name = "LLMFactory"
 # Dynamic versioning using setuptools_scm (recommended)
 # This will use your Git tags for versioning
 dynamic = ["version"]
 # A short description of your project (required)
-description = "A short description of your project"
-# Longer description, can be the same as README content
+description = "Factory design to create LLM interfaces dynamically"
 readme = "README.md"
-# Project license
 license = {file = "LICENSE"}
-# Minimum Python version required
-requires-python = ">=3.7"
-# Project authors
+requires-python = ">=3.9"
 authors = [
     {name = "David Mickelson", email = "davidpmickelson@gmail.com"},
 ]
-# Project maintainers (if different from authors)
-maintainers = [
-    {name = "Maintainer Name", email = "maintainer.email@example.com"},
-]
 # Project keywords (for PyPI)
-keywords = ["keyword1", "keyword2"]
+keywords = ["LLM", "OpenAI", "Factory"]
 # Project classifiers (see https://pypi.org/classifiers/)
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -47,7 +38,6 @@ dependencies = [
     "pydantic_settings>=2.0.0",  # Added pydantic_settings
     "pytest>=6.2.5",  # Added pytest to main dependencies
     "python-dotenv>=0.19.0",  # Added python-dotenv
-    # Add more dependencies as needed
 ]
 
 # Optional dependencies
@@ -60,16 +50,11 @@ dev = [
     # Add more development dependencies as needed
 ]
 
-# Entry points for your project (if it's a command-line tool)
-[project.scripts]
-your-cli-command = "your_package.module:function"
-
 # URLs associated with the project
 [project.urls]
-Homepage = "https://github.com/yourusername/your-project"
+Homepage = "https://github.com/dmickelson/your-project"
 Documentation = "https://your-project.readthedocs.io"
-Repository = "https://github.com/yourusername/your-project.git"
-"Bug Tracker" = "https://github.com/yourusername/your-project/issues"
+Repository = "https://github.com/dmickelson/your-project.git"
 
 # Tool configurations
 [tool.setuptools]
