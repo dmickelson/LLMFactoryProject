@@ -52,9 +52,9 @@ dev = [
 
 # URLs associated with the project
 [project.urls]
-Homepage = "https://github.com/dmickelson/your-project"
+Homepage = "https://github.com/dmickelson/llmfactoryproject"
 Documentation = "https://your-project.readthedocs.io"
-Repository = "https://github.com/dmickelson/your-project.git"
+Repository = "https://github.com/dmickelson/llmfactoryproject.git"
 
 # Tool configurations
 [tool.setuptools]
