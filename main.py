@@ -1,13 +1,9 @@
 # Example of how to use the LLM Factory
 
-from llmfactory import LLMFactory
+# from llmfactory.llm_factory import CompletionModel, LLMFactory
+from llmfactory import llm_factory
 
 if __name__ == "__main__":
-
-    class CompletionModel(BaseModel):
-        response: str = Field(description="Your response to the user.")
-        reasoning: str = Field(
-            description="Explain your reasoning for the response.")
 
     messages = [
         {"role": "system", "content": "You are a helpful assistant."},
@@ -17,12 +13,12 @@ if __name__ == "__main__":
         },
     ]
 
-    llm = LLMFactory("openai")
+    llm = llm_factory.LLMFactory("cohere")
     completion = llm.create_completion(
-        response_model=CompletionModel,
+        response_model=llm_factory.CompletionModel,
         messages=messages,
     )
-    assert isinstance(completion, CompletionModel)
+    assert isinstance(completion, llm_factory.CompletionModel)
 
     print(f"Response: {completion.response}\n")
     print(f"Reasoning: {completion.reasoning}")
