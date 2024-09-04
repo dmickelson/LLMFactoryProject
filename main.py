@@ -1,5 +1,7 @@
 # Example of how to use the LLM Factory
 
+from llmfactory import LLMFactory
+
 if __name__ == "__main__":
 
     class CompletionModel(BaseModel):

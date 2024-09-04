@@ -1,8 +1,6 @@
 # pyproject.toml
 
 [build-system]
-# Specify the build system requirements
-# These are the minimum requirements for building the project
 requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
 build-backend = "setuptools.build_meta"
 
@@ -38,6 +36,8 @@ dependencies = [
     "pydantic_settings>=2.0.0",  # Added pydantic_settings
     "pytest>=6.2.5",  # Added pytest to main dependencies
     "python-dotenv>=0.19.0",  # Added python-dotenv
+    "openai=*",
+    "anthropic=*",
 ]
 
 # Optional dependencies

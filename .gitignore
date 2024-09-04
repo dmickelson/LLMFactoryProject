@@ -1,2 +1,4 @@
 .env
 .venv/
+src/__init__.py
+llmfactory/__pycache__/__init__.cpython-310.pyc
