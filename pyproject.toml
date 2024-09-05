@@ -24,22 +24,21 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
 ]
 # Dependencies
 # List your project's dependencies here
 dependencies = [
-    "pydantic_settings>=2.0.0",  # Added pydantic_settings
-    "pytest>=6.2.5",  # Added pytest to main dependencies
-    "python-dotenv>=0.19.0",  # Added python-dotenv
-    "openai=*",
-    "anthropic=*",
+    "pydantic_settings>=2.0.0",
+    "pytest>=6.2.5",
+    "python-dotenv>=0.19.0",
+    "openai>=1.0.0",
+    "anthropic>=0.3.0",
+    "instructor>=0.2.0",
+    "cohere>=4.0.0",
+    "pydantic>=2.0.0",
 ]
-
 # Optional dependencies
 # These can be installed using pip install your-project[dev]
 [project.optional-dependencies]
@@ -53,17 +52,16 @@ dev = [
 # URLs associated with the project
 [project.urls]
 Homepage = "https://github.com/dmickelson/llmfactoryproject"
-Documentation = "https://your-project.readthedocs.io"
 Repository = "https://github.com/dmickelson/llmfactoryproject.git"
 
 # Tool configurations
 [tool.setuptools]
 # Specify package discovery information
-packages = ["your_package"]
+packages = ["llmfactory"]
 
 [tool.setuptools_scm]
 # Configuration for setuptools_scm (automatic versioning)
-write_to = "your_package/_version.py"
+write_to = "llmfactory/_version.py"
 
 [tool.flake8]
 max-line-length = 88
